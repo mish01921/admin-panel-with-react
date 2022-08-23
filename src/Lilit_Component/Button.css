@@ -1,0 +1,10 @@
+button {
+    width: 68px;
+    border: 1px solid rgb(5, 5, 20)
+ }
+ .button-reset{
+    background-color: red;
+ }
+ .button-submit{
+    background-color: blue;
+ }
