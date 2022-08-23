@@ -1,5 +1,7 @@
 import Lilit from './Lilit_Component/Lilit';
+
 import Vach from './VachComponents/Vach'
+
 import React  from 'react';
 import './App.css';
 
@@ -8,6 +10,7 @@ function App() {
     <div className='App'>
       <Lilit />
       <Vach />
+
     </div>
   );
 }
