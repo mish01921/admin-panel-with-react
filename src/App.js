@@ -1,9 +1,9 @@
 import React from "react";
-import Admi from "./ComponentM/adminM";
+import AdminM from "./ComponentM/adminM";
 function App() {
   return (
 <React.Fragment>
-  <Admi />
+  <AdminM />
 </React.Fragment>
   );
 }
