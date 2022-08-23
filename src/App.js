@@ -7,6 +7,7 @@ import React  from 'react';
 import './App.css';
 // import Elen from './ElenComponents./Elen';
 import Elen from './ElenComponents/Elen';
+import AdminM from './ComponentM/adminM';
 
 
 function App() {
@@ -29,7 +30,7 @@ import Admi from "./ComponentM/adminM";
 function App() {
   return (
 <React.Fragment>
-  <Admi />
+  <AdminM />
 </React.Fragment>
 >>>>>>> misho
   );

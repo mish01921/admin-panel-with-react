@@ -4,7 +4,7 @@ import ReadM from './ReadM';
 // import UpdateM from './UpdateM';
 import "./Misho.css"
 
-function Admi() {
+function AdminM() {
   return (
     <React.Fragment>
          
@@ -19,4 +19,4 @@ function Admi() {
   )
 }
 
-export default Admi;
+export default AdminM;
