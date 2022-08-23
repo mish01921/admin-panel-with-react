@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import Lilit from './Lilit_Component/Lilit';
 
 import Vach from './VachComponents/Vach'
@@ -14,27 +14,16 @@ import AdminM from './ComponentM/adminM';
 function App() {
   return (
 
-    <div>
-      <Elen />
+    // <div>
+  
     <div className='App'>
+       <Elen />
       <Lilit />
       <Vach />
       <AdminM />
 
     </div>
-    
-
-    
-=======
-import React from "react";
-import Admi from "./ComponentM/adminM";
-function App() {
-  return (
-<React.Fragment>
-  <AdminM />
-</React.Fragment>
->>>>>>> misho
-  );
+  )
 }
-
+    
 export default App;
