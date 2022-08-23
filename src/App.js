@@ -1,10 +1,10 @@
-import Misho from "./Misho/MishoAdmin";
-import "./Misho/MishoStyle.css"
+import React from "react";
+import Admi from "./ComponentM/adminM";
 function App() {
   return (
-    <div>
-    <Misho />
-    </div>
+<React.Fragment>
+  <Admi />
+</React.Fragment>
   );
 }
 
