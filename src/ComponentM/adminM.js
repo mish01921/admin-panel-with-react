@@ -1,21 +1,28 @@
 import React from 'react'
- import CreateM from './CreateM';
-import ReadM from './ReadM';
-// import UpdateM from './UpdateM';
 import "./Misho.css"
+ import CreateM from './createM';
+ import ReadM from './readM';
+//  import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+
 
 function AdminM() {
   return (
-    <React.Fragment>
-         
-         <ReadM />
-        {/*<UpdateM />  */}
-        <div className='main'>
-        <CreateM />
-        {/* <h2 className="main-header">React Crud Operations</h2> */}
-        </div>
-        
-    </React.Fragment>
+   
+    
+     <div className="main">
+      <h2 className="main-header">React Crud Operations</h2>
+      <div>
+         <CreateM />
+      </div>
+
+      <div style={{ marginTop: 20 }}>
+      <ReadM />
+      </div>
+    </div>
+
+
+ 
   )
 }
 

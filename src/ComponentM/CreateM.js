@@ -5,7 +5,8 @@ import axios from "axios"
 
 
 
-export default function createM() {
+
+export default function CreateM() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false);

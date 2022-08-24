@@ -3,9 +3,10 @@ import AdminM from "./ComponentM/adminM";
 
 function App() {
   return (
-<React.Fragment>
+<div>
   <AdminM />
-</React.Fragment>
+  </div>
+
   );
 }
 
