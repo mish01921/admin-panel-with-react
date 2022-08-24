@@ -27,7 +27,7 @@
     display: inline-block;
   }
   
-  .crud-modal-wrapper__title {
+  .crud-modal-wrapper__name {
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 0.8rem;
     font-size: 1.3rem;

@@ -16,13 +16,8 @@ const DescriptionRenderer = ({ field }) => <textarea {...field} />;
 let tasks = [
   {
     id: 1,
-    title: 'Create an example',
-    description: 'Create an example of how to use the component',
-  },
-  {
-    id: 2,
-    title: 'Improve',
-    description: 'Improve the component!',
+    name: "Vach Malkhasyan",
+    description: 'Full-stack developer',
   },
 ];
 
@@ -56,19 +51,19 @@ const service = {
     result = result.sort(getSorter(payload.sort));
     return Promise.resolve(result);
   },
-  create: (task) => {
+  create: (name) => {
     count += 1;
     tasks.push({
-      ...task,
+      ...name,
       id: count,
     });
-    return Promise.resolve(task);
+    return Promise.resolve(name);
   },
   update: (data) => {
-    const task = tasks.find(t => t.id === data.id);
-    task.title = data.title;
-    task.description = data.description;
-    return Promise.resolve(task);
+    const name = tasks.find(t => t.id === data.id);
+    name.name = data.name;
+    name.description = data.description;
+    return Promise.resolve(name);
   },
   delete: (data) => {
     const task = tasks.find(t => t.id === data.id);
@@ -81,7 +76,7 @@ const styles = {
   container: { margin: 'auto', width: 'fit-content' },
 };
 
-const Example = () => (
+const Vach = () => (
   <div style={styles.container}>
     <CRUDTable
       caption="Tasks"
@@ -95,9 +90,9 @@ const Example = () => (
           readOnly
         />
         <Field
-          name="title"
-          label="Title"
-          placeholder="Title"
+          name="name"
+          label="name"
+          placeholder="name"
         />
         <Field
           name="description"
@@ -106,22 +101,23 @@ const Example = () => (
         />
       </Fields>
       <CreateForm
-        title="Task Creation"
-        message="Create a new task!"
-        trigger="Create Task"
-        onSubmit={task => service.create(task)}
+        title="User"
+        message="Create a new user!"
+        trigger="Create User"
+        onSubmit={user => service.create(user)}
         submitText="Create"
         validate={(values) => {
           const errors = {};
-          if (!values.title) {
-            errors.title = 'Please, provide task\'s title';
+          if (!values.name) {
+            errors.name = 'Please, provide user\'s name';
           }
 
           if (!values.description) {
-            errors.description = 'Please, provide task\'s description';
+            errors.description = 'Please, provide user\'s description';
           }
 
           return errors;
+          
         }}
       />
 
@@ -151,8 +147,8 @@ const Example = () => (
       />
 
       <DeleteForm
-        title="Task Delete Process"
-        message="Are you sure you want to delete the task?"
+        title="User Delete Process"
+        message="Are you sure you want to delete the user?"
         trigger="Delete"
         onSubmit={task => service.delete(task)}
         submitText="Delete"
@@ -167,4 +163,4 @@ const Example = () => (
     </CRUDTable>
   </div>
 );
- export default Example
+ export default Vach
