@@ -11,9 +11,10 @@ import Elen from './ElenComponents/Elen';
 function App() {
   return (
 
-    <div>
-      <Elen />
+    
+      
     <div className='App'>
+      <Elen />
       <Lilit />
       <Vach />
 
