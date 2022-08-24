@@ -12,7 +12,7 @@ function AdminM() {
         {/*<UpdateM />  */}
         <div className='main'>
         <CreateM />
-        <h2 className="main-header">React Crud Operations</h2>
+        {/* <h2 className="main-header">React Crud Operations</h2> */}
         </div>
         
     </React.Fragment>
