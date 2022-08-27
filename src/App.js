@@ -6,7 +6,7 @@ function App() {
 <div>
   <AdminM />
   </div>
-
+  
   );
 }
 
