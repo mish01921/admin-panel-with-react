@@ -57,14 +57,14 @@ export default function ReadM() {
                                 <Table.Cell>{data.lastName}</Table.Cell>
                                 <Table.Cell>{data.checkbox ? 'Checked' : 'Unchecked'}</Table.Cell>
 
-                                  <Link to='/update'>
+                                  <Link to='/updateM'>
                                     <Table.Cell> 
-                                        <Button onClick={() => setData(data)}>Update</Button>
+                                        <Button color='green' onClick={() => setData(data)}>Update</Button>
                                     </Table.Cell>
                                 </Link>
 
                                 <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                                    <Button color='red' onClick={() => onDelete(data.id)}>Delete</Button>
                                 </Table.Cell>
                             </Table.Row>
                         )

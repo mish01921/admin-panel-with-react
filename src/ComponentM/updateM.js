@@ -40,7 +40,7 @@ export default function UpdateM() {
                 <Form.Field>
                     <Checkbox label='I agree to the Terms and Conditions' checked={checkbox} onChange={() => setCheckbox(!checkbox)}/>
                 </Form.Field>
-                <Button type='submit' onClick={updateAPIData}>Update</Button>
+                <Button type='submit' onClick={updateAPIData} >Update</Button>
             </Form>
         </div>
     )
