@@ -1,0 +1,33 @@
+
+.search{
+    margin: 5% auto;
+    width: 300px;
+    height: 250px;
+    background-color:rgb(18, 53, 94) ;
+    color: antiquewhite;
+}
+.search>div{
+    padding-top:2%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+input{
+    height: 35px;
+    width: 280px;
+    margin-left:3%;
+   
+}  
+.submit{
+    background-color:  rgb(1, 12, 34);
+    color:antiquewhite;
+    margin-top: 6%;
+}
+.submit:hover{
+    background-color:rgb(26, 96, 161) ;
+}
+p{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+    

@@ -1,41 +1,31 @@
-
+import React from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Menu from './components/Menu';
+import Login from './components/Login';
 import Kristina from "./KristinaComponents/Kristina";
-
 import Lilit from './Lilit_Component/Lilit';
-
 import Vach from './VachComponents/Vach'
-
-import React, {useState}  from 'react';
-import './App.css';
-// import Elen from './ElenComponents./Elen';
 import Elen from './ElenComponents/Elen';
-//misho components
 import AdminM from './ComponentM/adminM';
-
+import './App.css';
 
 
 function App() {
- 
   return (
-
-
-
-
-
-
-  
-    
-    <div className='App'>
-        <Elen />
-      <Kristina/>
-      <Lilit />
-      <Vach />
-      <AdminM />
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/Vach' element={<Vach />} />
+        <Route path='/Misho' element={<AdminM />} />
+        <Route path='/Elen' element={<Elen />} />
+        <Route path='/Lilit' element={<Lilit />} />
+        <Route path='/Kristina' element={<Kristina />} />
+      </Routes>
+    </BrowserRouter>
     
 
-
-)}
+  );
+}
 
 export default App;
