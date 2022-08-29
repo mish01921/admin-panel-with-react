@@ -5,11 +5,11 @@ import ReadM from './readM';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import UpdateM from './updateM';
 
-<<<<<<< HEAD
-function AdminM() {
-=======
+
+
+
 export default function AdminM() {
->>>>>>> misho
+
   return (
     
     <Router>
@@ -37,15 +37,8 @@ export default function AdminM() {
           </Routes>
         </div>
         
-<<<<<<< HEAD
-    </React.Fragment>
-  )
-}
-
-export default AdminM;
-=======
       </div>
     </Router>
   );
 }
->>>>>>> misho
+
