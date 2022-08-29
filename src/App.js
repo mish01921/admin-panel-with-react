@@ -1,10 +1,17 @@
+
 import React from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Menu from './components/Menu';
 import Login from './components/Login';
-import Kristina from "./KristinaComponents/Kristina";
 import Lilit from './Lilit_Component/Lilit';
+import Kristina from "./KristinaComponents/Kristina";
 import Vach from './VachComponents/Vach'
+
+
+import React, {useState}  from 'react';
+
+import './App.css';
+
 import Elen from './ElenComponents/Elen';
 import AdminM from './ComponentM/adminM';
 import './App.css';
@@ -27,5 +34,6 @@ function App() {
 
   );
 }
+
 
 export default App;
