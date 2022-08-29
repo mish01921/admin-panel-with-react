@@ -10,22 +10,9 @@
     "react": "^18.2.0",
     "react-crud-table": "^0.3.1",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-router-dom": "^6.3.0",
-=======
-<<<<<<< HEAD
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^2.1.8",
-=======
->>>>>>> 0dd18b72cf5f3758925ce3bbd58e15c9c8f15a16
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^5.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.3",
-<<<<<<< HEAD
-=======
->>>>>>> misho
->>>>>>> 426f0f13b01e47c2ca23ae5196ebbaebf1378de4
->>>>>>> 0dd18b72cf5f3758925ce3bbd58e15c9c8f15a16
     "web-vitals": "^2.1.4"
   },
   "scripts": {
