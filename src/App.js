@@ -1,12 +1,13 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Login from './components/Login';
-import Kristina from "./KristinaComponents/Kristina";
 import Lilit from './Lilit_Component/Lilit';
+import Kristina from "./KristinaComponents/Kristina";
 import Vach from './VachComponents/Vach'
 import Elen from './ElenComponents/Elen';
-import AdminM from './ComponentM/adminM';
+// import AdminM from './ComponentM/adminM';
 import './App.css';
 
 
@@ -17,7 +18,7 @@ function App() {
         <Route path='/' element={<Login />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/Vach' element={<Vach />} />
-        <Route path='/Misho' element={<AdminM />} />
+        {/* <Route path='/Misho' element={<AdminM />} /> */}
         <Route path='/Elen' element={<Elen />} />
         <Route path='/Lilit' element={<Lilit />} />
         <Route path='/Kristina' element={<Kristina />} />
@@ -27,5 +28,6 @@ function App() {
 
   );
 }
+
 
 export default App;

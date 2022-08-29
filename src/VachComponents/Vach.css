@@ -27,7 +27,7 @@
     display: inline-block;
   }
   
-  .crud-modal-wrapper__title {
+  .crud-modal-wrapper__name {
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 0.8rem;
     font-size: 1.3rem;
@@ -147,8 +147,12 @@
     border-collapse: collapse;
     box-shadow: 2px 2px 5px 0 #c7c7c7;
   }
+<<<<<<< HEAD
+  
+=======
   .crud-table__row {
   }
+>>>>>>> 426f0f13b01e47c2ca23ae5196ebbaebf1378de4
   .crud-table__header-cell {
     cursor: pointer;
     background: rgba(153, 158, 162, 0.05);
@@ -158,8 +162,12 @@
     border-bottom: 1px solid rgba(34, 36, 38, 0.1);
   }
   
+<<<<<<< HEAD
+  
+=======
   .crud-table__header {
   }
+>>>>>>> 426f0f13b01e47c2ca23ae5196ebbaebf1378de4
   
   .crud-table__body {
     background-color: #fff;
