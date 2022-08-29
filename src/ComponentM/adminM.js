@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Misho.css"
-import CreateM from './createM';
-import ReadM from './readM';
+import CreateM from './CreateM';
+import ReadM from './ReadM';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import UpdateM from './updateM';
 

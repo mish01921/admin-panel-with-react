@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
@@ -11,6 +12,8 @@ import Elen from './ElenComponents/Elen';
 import './App.css';
 
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,7 +21,6 @@ function App() {
         <Route path='/' element={<Login />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/Vach' element={<Vach />} />
-        {/* <Route path='/Misho' element={<AdminM />} /> */}
         <Route path='/Elen' element={<Elen />} />
         <Route path='/Lilit' element={<Lilit />} />
         <Route path='/Kristina' element={<Kristina />} />
@@ -29,5 +31,5 @@ function App() {
   );
 }
 
-
 export default App;
+{/* <Route path='/Misho' element={<AdminM />} /> */}
