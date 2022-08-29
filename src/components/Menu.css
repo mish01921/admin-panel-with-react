@@ -1,7 +1,8 @@
 body{
-    background-image: url(https://img.rawpixel.com/private/static/images/website/2022-05/rm422-076-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e877fedea1136b8c616786d383ed70c3);
+    /* background-image: url(https://img.rawpixel.com/private/static/images/website/2022-05/rm422-076-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e877fedea1136b8c616786d383ed70c3);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: rgb(4, 35, 63);
 }  
 h1{
     display: flex;
