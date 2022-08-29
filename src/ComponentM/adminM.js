@@ -1,22 +1,44 @@
-import React from 'react'
- import CreateM from './CreateM';
-import ReadM from './ReadM';
-// import UpdateM from './UpdateM';
+import React from 'react';
 import "./Misho.css"
+import CreateM from './CreateM';
+import ReadM from './ReadM';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import UpdateM from './updateM';
 
-function AdminM() {
+
+
+
+export default function AdminM() {
+
   return (
-    <React.Fragment>
-         
-         <ReadM />
-        {/*<UpdateM />  */}
-        <div className='main'>
-        <CreateM />
+    
+    <Router>
+
+      <div>
+        
+      </div>
+      <div className="main">
         <h2 className="main-header">React Crud Operations</h2>
+        <div>
+          <Routes>
+             <Route path='/createM' element={<CreateM />} />
+          </Routes>
+        </div>
+
+        <div style={{ marginTop: 20 }}>
+           <Routes>
+             <Route path='/readM' element={<ReadM />} />
+          </Routes>
+        </div>
+
+        <div>
+          <Routes>
+             <Route path='/updateM' element={<UpdateM />} />
+          </Routes>
         </div>
         
-    </React.Fragment>
-  )
+      </div>
+    </Router>
+  );
 }
 
-export default AdminM;
