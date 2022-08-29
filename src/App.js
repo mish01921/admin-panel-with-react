@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // <<<<<<< HEAD
 import Lilit from './Lilit_Component/Lilit';
 
@@ -13,6 +14,19 @@ import AdminM from './ComponentM/adminM';
 
 function App() {
   return (
+=======
+import React from "react";
+import AdminM from "./ComponentM/adminM";
+
+function App() {
+  return (
+<div>
+  <AdminM />
+  </div>
+  
+  );
+}
+>>>>>>> misho
 
     // <div>
   
