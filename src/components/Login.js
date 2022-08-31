@@ -31,7 +31,10 @@ function Login () {
   
  
     return(
-        <div className="wrapper">
+        <div className="loginlist">
+          <div>
+            <h1 className="login">Login</h1>
+          </div>  
         <div className="search">
                 <p>Username:</p>
                 <input type="text" className="input"

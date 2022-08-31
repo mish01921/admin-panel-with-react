@@ -4,7 +4,7 @@ body{
     background-size: cover; */
     background-color: rgb(4, 35, 63);
 }  
-h1{
+.title{
     display: flex;
     justify-content: center;
     margin: 5%;
@@ -12,7 +12,7 @@ h1{
     color:rgb(163, 158, 149);
     font-family:initial ;
 } 
-h1:hover{
+.title:hover{
     color:beige;
     transform: scale(1.1);
     transition: 2s;
@@ -23,7 +23,7 @@ h1:hover{
     margin:10% auto;
 
 }
-button{
+.onclick{
     width: 90px;
     height: 40px;
     background-color: rgb(163, 158, 149);
@@ -32,7 +32,7 @@ button{
     font-family:initial ;
 
 }
-button:hover{
+.onclick:hover{
     background-color: beige;
     transform: scale(1.1);
     transition: 2s;
