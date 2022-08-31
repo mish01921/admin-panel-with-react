@@ -8,14 +8,14 @@ const navigate = useNavigate();
   return (
     <div className='container'>
       <div>
-          <h1>Crud table in React</h1>
+          <h1 className="title">Crud table in React</h1>
       </div>
         <div className='container-content'>
-          <button onClick={() => navigate("/Vach")}>Vach</button>
-          <button onClick={() => navigate("/AdminM")}>Misho</button>
-          <button onClick={() => navigate("/Kristina")}>Kristina</button>
-          <button onClick={() => navigate("/Elen")}>Elen</button>
-          <button onClick={() => navigate("/Lilit")}>Lilit</button>
+          <button className="onclick" onClick={() => navigate("/Vach")}>Vach</button>
+          <button className="onclick" onClick={() => navigate("/AdminM")}>Misho</button>
+          <button className="onclick" onClick={() => navigate("/Kristina")}>Kristina</button>
+          <button className="onclick" onClick={() => navigate("/Elen")}>Elen</button>
+          <button className="onclick" onClick={() => navigate("/Lilit")}>Lilit</button>
       </div>
     </div>
   )

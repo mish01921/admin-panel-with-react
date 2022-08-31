@@ -6,7 +6,7 @@ import Menu from './components/Menu';
 import Login from './components/Login';
 import Lilit from './Lilit_Component/Lilit';
 import Kristina from "./KristinaComponents/Kristina";
-import Vach from './VachComponents/Vach'
+import Vach from './VachComponents/Vach';
 import Elen from './ElenComponents/Elen';
 // import AdminM from './ComponentM/adminM';
 import './App.css';
