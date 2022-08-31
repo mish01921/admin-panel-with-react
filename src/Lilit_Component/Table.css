@@ -1,4 +1,6 @@
 table {
+    margin-top: 6px;
+    background-color: antiquewhite;
     width: 100%;
     border-collapse: collapse;
     border: 1px solid rgb(5, 14, 5);
@@ -21,3 +23,9 @@ table {
     border: 1px solid green;
     padding: 5px;
  }
+ .edit-action{
+   background-color: red;
+}
+.remove-action{
+   background-color: blue;
+}

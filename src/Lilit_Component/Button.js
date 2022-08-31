@@ -11,7 +11,7 @@ const Button = ({
 }) => {
    return (
       <button
-         className={classNames}
+         className={`${classNames}:butstyle`}
          onClick={() => handleClick(data)}
          type={type}
          disabled={disabled}
