@@ -79,7 +79,7 @@ const styles = {
 const Vach = () => (
   <div style={styles.container}>
     <CRUDTable
-      caption="Tasks"
+      caption="USERS"
       fetchItems={payload => service.fetchItems(payload)}
     >
       <Fields>
