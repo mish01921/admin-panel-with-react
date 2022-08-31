@@ -15,7 +15,7 @@ export default function AdminM() {
     <Router>
 
       <div>
-        
+      <div>ok</div>
       </div>
       <div className="main">
         <h2 className="main-header">React Crud Operations</h2>
