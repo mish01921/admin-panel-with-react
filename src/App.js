@@ -6,6 +6,7 @@ import Lilit from './Lilit_Component/Lilit';
 import Kristina from "./KristinaComponents/Kristina";
 import Vach from './VachComponents/Vach';
 import Elen from './ElenComponents/Elen';
+import AdminM from "./ComponentM/AdminM"
 import './App.css';
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Elen' element={<Elen />} />
         <Route path='/Lilit' element={<Lilit />} />
         <Route path='/Kristina' element={<Kristina />} />
+        <Route path='/AdminM' element={<AdminM />} />
       </Routes>
     </BrowserRouter>
     
