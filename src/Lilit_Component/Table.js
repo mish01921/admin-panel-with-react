@@ -26,7 +26,7 @@ const Table = ({
                      <div>
                         <Button
                            label="edit"
-                           classNames="edit-ection"
+                           classNames="edit-action"
                            handleClick={handleEditClick}
                            data={({ index, user })}
                            type="button"

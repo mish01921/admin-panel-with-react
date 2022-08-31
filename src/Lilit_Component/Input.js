@@ -5,7 +5,7 @@ const Input = ({
     placeholder,
     handleChange,
     value,
-    fieldName
+    fieldName,
  }) => {
     return (
        <input
