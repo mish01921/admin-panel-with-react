@@ -1,13 +1,12 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
 import "./Misho.css";
 import data from "./Mock-data.json";
-import ReadOnlyRow from './ReadOnlyRow';
-import EditableRow from './EditableRow';
-import { Form } from 'semantic-ui-react';
+import ReadOnlyRow from "./ReadOnlyRow";
+import EditableRow from "./EditableRow";
 
-function AdminM() {
-  const [contacts, setContacts] = useState(data)
+const App = () => {
+  const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fullName: "",
     address: "",
@@ -15,16 +14,16 @@ function AdminM() {
     email: "",
   });
 
-  const[editFormData, setEditFormData] = useState({
+  const [editFormData, setEditFormData] = useState({
     fullName: "",
     address: "",
     phoneNumber: "",
     email: "",
-  })
+  });
 
-  const [editContactId, setEditcontactId] = useState(null)
-  
-  const handleAddFormChange = (event) =>{
+  const [editContactId, setEditContactId] = useState(null);
+
+  const handleAddFormChange = (event) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute("name");
@@ -33,128 +32,154 @@ function AdminM() {
     const newFormData = { ...addFormData };
     newFormData[fieldName] = fieldValue;
 
-    setAddFormData(newFormData)
-  }
-
-  const handleEditFormChange = (event) => {
-    event.preventDefault()
-
-    const fieldName = event.target.getAttribute("name")
-    const fieldValue = event.target.value
-
-    const newFormData = { ...editFormData }
-    newFormData[fieldName] = fieldValue
-
-    setEditFormData(newFormData)
-  }
-
-  const handleAddFormSubmit = (event) => {
-    event.preventDefault()
-
-  const newContact  = {
-     id: nanoid(),
-    fullName: addFormData.fullName,
-    address: addFormData.address,
-    phoneNumber: addFormData.phoneNumber,
-    email: addFormData.email,
+    setAddFormData(newFormData);
   };
 
-  const newContacts = [...contacts, newContact];
-  setContacts(newContacts)
-  }
+  const handleEditFormChange = (event) => {
+    event.preventDefault();
 
-  const handleEditFormSubmite = (event) => {
-    event.preventDefault()
+    const fieldName = event.target.getAttribute("name");
+    const fieldValue = event.target.value;
 
-    const editContact = {
+    const newFormData = { ...editFormData };
+    newFormData[fieldName] = fieldValue;
+
+    setEditFormData(newFormData);
+  };
+
+  const handleAddFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newContact = {
+      id: nanoid(),
+      fullName: addFormData.fullName,
+      address: addFormData.address,
+      phoneNumber: addFormData.phoneNumber,
+      email: addFormData.email,
+    };
+
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
+  };
+
+  const handleEditFormSubmit = (event) => {
+    event.preventDefault();
+
+    const editedContact = {
       id: editContactId,
       fullName: editFormData.fullName,
-      adress: editFormData.address,
+      address: editFormData.address,
       phoneNumber: editFormData.phoneNumber,
-      email: editFormData.email
-    }
+      email: editFormData.email,
+    };
 
-    const newContacts = [...contacts]
-  }
+    const newContacts = [...contacts];
 
-  const handleEditClick = (event, contact) =>{
+    const index = contacts.findIndex((contact) => contact.id === editContactId);
+
+    newContacts[index] = editedContact;
+
+    setContacts(newContacts);
+    setEditContactId(null);
+  };
+
+  const handleEditClick = (event, contact) => {
     event.preventDefault();
-    setEditcontactId(contact.id)
+    setEditContactId(contact.id);
 
     const formValues = {
       fullName: contact.fullName,
-      adrress: contact.adress,
+      address: contact.address,
       phoneNumber: contact.phoneNumber,
       email: contact.email,
-    }
-    setEditFormData(formValues)
-  }
+    };
+
+    setEditFormData(formValues);
+  };
+
+  const handleCancelClick = () => {
+    setEditContactId(null);
+  };
+
+  const handleDeleteClick = (contactId) => {
+    const newContacts = [...contacts];
+
+    const index = contacts.findIndex((contact) => contact.id === contactId);
+
+    newContacts.splice(index, 1);
+
+    setContacts(newContacts);
+  };
 
   return (
-    <div className='app-container'>
-       <Form>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {contacts.map((contact) => (
-            <Fragment>
-             {editContactId === contact.id ? (<EditableRow  editFormData={editFormData} handleEditFormChange={handleEditFormChange}/> 
-              ) : (
-              <ReadOnlyRow contact={contact} 
-              handleEditClick={handleEditClick}
-              />
-              )}
-            </Fragment>
-          ))},
-         
-       
-        </tbody>
-      </table>
-      </Form>
-        <h2>Add new Contact</h2>
+    <div className="app-container">
+      <form onSubmit={handleEditFormSubmit}>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {contacts.map((contact) => (
+              <Fragment>
+                {editContactId === contact.id ? (
+                  <EditableRow
+                    editFormData={editFormData}
+                    handleEditFormChange={handleEditFormChange}
+                    handleCancelClick={handleCancelClick}
+                  />
+                ) : (
+                  <ReadOnlyRow
+                    contact={contact}
+                    handleEditClick={handleEditClick}
+                    handleDeleteClick={handleDeleteClick}
+                  />
+                )}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </form>
+
+      <h2>Add a Contact</h2>
       <form onSubmit={handleAddFormSubmit}>
-        <input 
+        <input
           type="text"
           name="fullName"
           required="required"
-          placeholder="Enter a name"
+          placeholder="Enter a name..."
           onChange={handleAddFormChange}
         />
-          <input 
+        <input
           type="text"
           name="address"
           required="required"
-          placeholder="Enter a address"
+          placeholder="Enter an addres..."
           onChange={handleAddFormChange}
         />
-          <input 
+        <input
           type="text"
           name="phoneNumber"
           required="required"
-          placeholder="Enter a phone number"
+          placeholder="Enter a phone number..."
           onChange={handleAddFormChange}
         />
-          
-          <input 
+        <input
           type="email"
           name="email"
           required="required"
-          placeholder="Enter a email"
+          placeholder="Enter an email..."
           onChange={handleAddFormChange}
         />
-        <button type="subbmit">Add</button>
+        <button type="submit">Add</button>
       </form>
-
     </div>
-  )
-}
+  );
+};
 
-export default AdminM
+export default App;
