@@ -63,7 +63,7 @@ const service = {
     const name = tasks.find(t => t.id === data.id);
     name.name = data.name;
     name.description = data.description;
-    return Promise.resolve(name);
+    return Promise.resolve(data);
   },
   delete: (data) => {
     const task = tasks.find(t => t.id === data.id);
@@ -122,8 +122,8 @@ const Vach = () => (
       />
 
       <UpdateForm
-        title="Task Update Process"
-        message="Update task"
+        title="User Update Process"
+        message="Update user"
         trigger="Update"
         onSubmit={task => service.update(task)}
         submitText="Update"
@@ -133,12 +133,7 @@ const Vach = () => (
           if (!values.id) {
             errors.id = 'Please, provide id';
           }
-
-          if (!values.title) {
-            errors.title = 'Please, provide task\'s title';
-          }
-
-          if (!values.description) {
+           if (!values.description) {
             errors.description = 'Please, provide task\'s description';
           }
 
